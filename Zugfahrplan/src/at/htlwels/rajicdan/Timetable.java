@@ -55,33 +55,32 @@ public class Timetable {
 	}
 
 	public static void main(String args[]){
-		// Calendar c = Calendar.getInstance();
-		// c.set(2016, 4, 12 , 2,10);
-		// Train REX = new Train("REX");
-		// REX.addStop(c.getTime(), 5, "Wien Westbahnhof");
-		// c.set(2016, 4, 12 , 9,25);;
-		// REX.addStop(c.getTime(), 2, "Graz Hbf");
-		// c.set(2016, 4, 12 , 11,22);;
-		// REX.addStop(c.getTime(), 3, "Salzburg Hbf");
-		// c.set(2016, 4, 12 , 13,07);;
-		// Train Rail = new Train("RAIL");
-		// Rail.addStop(c.getTime(), 7, "Wels Hbf");
-		// c.set(2016, 4, 12 , 16,59);;
-		// Rail.addStop(c.getTime(), 1, "Linz Hbf");
-		// c.set(2016, 4, 12 , 19,46);;
-		// Rail.addStop(c.getTime(), 4, "Urfahr");
-		//
-		//
-		//
-		//
-		// LinkedList<Train> alltrains = new LinkedList<Train>(Arrays.asList(REX, Rail));
-		//
-		// Timetable gg = new Timetable(new Station("Wien"), alltrains);
-		//
-		// gg.ausgabe();
+		Calendar c = Calendar.getInstance();
+		c.set(2016, 4, 12 , 2,10);
+		Train REX = new Train("REX");
+		REX.addStop(c.getTime(), 5, "Wien Westbahnhof");
+		c.set(2016, 4, 12 , 9,25);;
+		REX.addStop(c.getTime(), 2, "Graz Hbf");
+		c.set(2016, 4, 12 , 11,22);;
+		REX.addStop(c.getTime(), 3, "Salzburg Hbf");
+		c.set(2016, 4, 12 , 13,07);;
+		Train Rail = new Train("RAIL");
+		Rail.addStop(c.getTime(), 7, "Wels Hbf");
+		c.set(2016, 4, 12 , 16,59);;
+		Rail.addStop(c.getTime(), 1, "Linz Hbf");
+		c.set(2016, 4, 12 , 19,46);;
+		Rail.addStop(c.getTime(), 4, "Urfahr");
 
-		System.out.println("loool");
-		
+
+
+
+		LinkedList<Train> alltrains = new LinkedList<Train>(Arrays.asList(REX, Rail));
+
+		Timetable gg = new Timetable(new Station("Wien"), alltrains);
+
+		gg.ausgabe();
+
+
 
 	}
 

@@ -2,7 +2,6 @@
 <project name="Test-project-for-Travis" basedir="." default="test">
     <property name="dir.src" value="src"/>
     <property name="dir.build" value="build"/>
-    <property name="dir.build.test" value="build/test"/>
     <property name="dir.classes" value="${dir.build}/classes"/>
     <property name="dir.jar" value="${dir.build}/jar"/>
 
@@ -27,8 +26,8 @@
     </target>
 
     <target name="build" depends="compile">
-        <mkdir dir="${dir.build.test}"/>
-        <javac srcdir="${dir.src}" destdir="${dir.build.test}" includeantruntime="false">
+        <mkdir dir="${dir.build}"/>
+        <javac srcdir="${dir.src}" destdir="${dir.build}" includeantruntime="false">
             <classpath refid="classpath.test"/>
         </javac>
         <echo message="Build done"/>
@@ -38,7 +37,7 @@
         <junit printsummary="on" haltonfailure="yes">
             <classpath>
                 <path refid="classpath.test"/>
-                <pathelement location="${dir.build.test}"/>
+                <pathelement location="${dir.build}"/>
             </classpath>
             <formatter type="brief" usefile="false"/>
 

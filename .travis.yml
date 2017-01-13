@@ -1,2 +1,6 @@
 language: java
-script: ant main
+before_install:
+  - cd java
+jdk:
+  - oraclejdk8
+  - openjdk7

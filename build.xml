@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Test-project-for-Travis" default="test">
+<project name="Test-project-for-Travis">
     <property name="dir.src" value="src"/>
     <property name="dir.build" value="build"/>
     <property name="dir.build.test" value="build/test"/>

@@ -1,4 +1,4 @@
-<project name="Zugfahrplan" basedir="." default="main">
+<project name="Test-project-for-Travis" basedir="." default="main">
     <property name="dir.src"     value="src"/>
     <property name="dir.build"   value="build"/>
     <property name="dir.classes" value="${dir.build}/classes"/>

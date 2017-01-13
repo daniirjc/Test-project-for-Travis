@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Test-project-for-Travis" default="">
+<project name="Test-project-for-Travis" default="test">
     <property name="dir.src" value="src"/>
     <property name="dir.build" value="build"/>
     <property name="dir.build.test" value="build/test"/>
@@ -9,6 +9,8 @@
     <path id="classpath.base">
         <pathelement location="lib/selenium-server-standalone-3.0.0-beta2.jar"/>
     </path>
+
+    <target name="test" depends="run"/>
 
     <path id="classpath.test">
         <pathelement location="lib/junit-4.12.jar"/>
@@ -22,5 +24,24 @@
         <javac srcdir="${dir.src}" destdir="${dir.build}" includeantruntime="false">
             <classpath refid="classpath.base"/>
         </javac>
+    </target>
+
+    <target name="build" depends="compile">
+        <mkdir dir="${dir.build.test}"/>
+        <javac srcdir="${dir.src}" destdir="${dir.build.test}" includeantruntime="false">
+            <classpath refid="classpath.test"/>
+        </javac>
+        <echo message="Build done"/>
+    </target>
+
+    <target name="run" depends="build">
+        <junit printsummary="on" haltonfailure="yes">
+            <classpath>
+                <path refid="classpath.test"/>
+                <pathelement location="${dir.build.test}"/>
+            </classpath>
+            <formatter type="brief" usefile="false"/>
+
+        </junit>
     </target>
 </project>

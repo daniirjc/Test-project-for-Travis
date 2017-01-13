@@ -1,7 +1,3 @@
-package at.htlwels.rajicd;
-
-
-
 public class BruchTest {
 
     public static void main(String[] args) {

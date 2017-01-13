@@ -1,5 +1,3 @@
-package at.htlwels.rajicd;
-
 import org.junit.Test;
 import static org.junit.Assert.*;
 

@@ -1,12 +1,15 @@
 package at.htlwels.rajicd;
 
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
-public class UnitTest {
-
+/**
+ * Created by Dani on 13.01.17.
+ */
+public class BruchTestTest {
     @Test
-    public void testConcatenate() {
+    public void divide() throws Exception {
         BruchTest bruch = new BruchTest();
 
         double result = bruch.divide(5,6);
